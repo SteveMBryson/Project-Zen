@@ -1,0 +1,57 @@
+.slider{
+  width: 100%;
+  float: left;
+  position: relative;
+
+  .slide{
+    float: left;
+
+    img{
+      float: left;
+      width: 100%;
+    }
+  }
+
+  .slick-dots{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    list-style: none;
+    padding: $pad-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    li{
+      margin: 0;
+      padding: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: $radius-large;
+      float: left;
+      background: $black;
+      margin: $pad-base $pad-small;
+      border: $border-light;
+      opacity: $opacity-small;
+
+      button{
+        display: none;
+      }
+    }
+    li.slick-active{
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $width-base){
+  .sb-column-12.sliderContainer{
+    padding: 0;
+    .slider{
+      padding: 0;
+    }
+  }
+}

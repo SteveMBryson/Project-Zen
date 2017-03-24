@@ -1,0 +1,67 @@
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    overflow-x: hidden;
+    z-index: 11;
+    transition: 0.5s;
+
+    .sideNavInner {
+        width: 100%;
+        float: left;
+        display: none;
+
+        .heading {
+            white-space: nowrap;
+            padding: $pad-large;
+        }
+        .item {
+            width: 100%;
+            padding: $pad-large;
+            white-space: nowrap;
+            float: left;
+            border-bottom: $border-base;
+            font-size: $font-small;
+            background: $off-white;
+            font-weight: $weight-large;
+            opacity: $opacity-base;
+            cursor: pointer;
+            text-transform: uppercase;
+            position: relative;
+            color: $black;
+            text-decoration: none;
+            letter-spacing: $letter-base;
+
+            input{
+              width: 100%;
+              padding: $pad-large;
+              border: 0;
+              font-weight: inherit;
+              font-size: inherit;
+              text-transform: inherit;
+              float:left;
+              background: $white;
+              margin: 1px 0 0 0;
+            }
+        }
+        .item.alt {
+            background: $white;
+            padding: 0;
+        }
+        .item.active{
+          border-left: $border-tab-active;
+          opacity: 1;
+        }
+        .item:hover{
+          opacity: 1;
+        }
+    }
+}
+.sideNav.right{
+  right: 0;
+  left: auto;
+}

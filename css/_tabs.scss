@@ -1,0 +1,61 @@
+ul.tabMenu{
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style:none;
+
+  li.tab{
+    float: left;
+    text-transform: uppercase;
+    font-size: $font-small;
+    letter-spacing: $letter-base;
+    font-weight: $weight-large;
+    padding: $pad-base $pad-large 0 $pad-large;
+    cursor: pointer;
+
+    .inner{
+      width: 100%;
+      float: left;
+      padding: $pad-base 0;
+      opacity: $opacity-small;
+      border-bottom: $border-tab;
+    }
+  }
+  li.tab.active{
+    .inner{
+      opacity: 1;
+      border-bottom: $border-tab-active;
+    }
+  }
+  li.tab.right{
+    float: right;
+  }
+  li.tab:hover{
+    .inner{
+      opacity: 1;
+    }
+  }
+}
+
+// Mobile Slide Tabs
+@media only screen and (max-width: 580px){
+  ul.tabMenu{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    li.tab{
+      float: none;
+      display: inline-block;
+      width: 40%;
+      text-align: center;
+
+      .inner{
+        float: none;
+      }
+    }
+    li.tab.right{
+      float: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.tableContainer{
+  width: 100%;
+  float: left;
+
+  table{
+    width: 100%;
+    float: left;
+    border-collapse: separate;
+
+    tbody{
+      tr{
+        th, td{
+          text-align: center;
+          border: 0;
+          font-size: $font-base;
+          padding: $pad-base;
+          background: $white;
+        }
+        th{
+          background: $light-grey;
+          font-weight: $weight-large;
+          letter-spacing: $letter-base;
+          font-size: $font-small;
+          text-transform: uppercase;
+        }
+        th.hide{
+          visibility: hidden;
+        }
+        .fa-long-arrow-down:before{
+          color: $red;
+        }
+        .fa-long-arrow-up:before{
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+
+// Mobile Slide Tabs
+@media only screen and (max-width: 580px){
+  .sb-column[data-value="dashboardData"]{
+    padding: 0;
+
+    .tableContainer{
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      margin-left: -1px;
+      padding: 0;
+
+      table{
+        tbody{
+          tr{
+            th, td{
+              width: 40%;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

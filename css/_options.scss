@@ -1,0 +1,40 @@
+.optionList{
+  float: left;
+
+  .option{
+    float: left;
+
+    .inner{
+      width: 100%;
+      float: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      font-size: $font-small;
+      font-weight: $weight-large;
+      text-transform: uppercase;
+      letter-spacing: $letter-base;
+      color: $grey;
+    }
+    .inner:hover {
+      color: $black;
+    }
+  }
+}
+.optionList.alt{
+  .option{
+    .inner{
+      color: $white;
+      opacity: $opacity-base;
+    }
+    .inner:hover {
+      opacity: 1;
+    }
+  }
+}
+.optionList.right{
+  float: right;
+}

@@ -1,0 +1,61 @@
+.buttonsContainer{
+  float: left;
+}
+.buttonsContainer.right{
+  float: right;
+}
+
+.button{
+  float: left;
+  border: 0;
+  padding: $pad-small $pad-base;
+
+  .inner{
+    float: left;
+    background: red;
+    padding: $pad-large;
+    width: 100%;
+    border-radius: $radius-base;
+    font-weight: $weight-large;
+    letter-spacing: $letter-base;
+    font-size: $font-small;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+    border: $border-dark;
+  }
+  .inner.ghost{
+    background: transparent;
+    color: $black;
+    padding: 0;
+    border: 0;
+  }
+  .inner.ghost.alt{
+    color: $white;
+    padding: 0;
+    border: 0;
+  }
+  .inner.main{
+    background: $light-pink;
+    border-color: $light-pink;
+  }
+  .inner.second{
+    background: $black;
+    border-color: $black;
+  }
+}
+.button.wide{
+  width: 100%;
+}
+.button.right{
+  float: right;
+}
+.button.pad-x{
+  padding-right: $pad-base;
+  padding-left: $pad-base;
+}
+.button.pad-y{
+  padding-top: $pad-base;
+  padding-bottom: $pad-base;
+}

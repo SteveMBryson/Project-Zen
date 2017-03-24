@@ -1,0 +1,61 @@
+<!-- <div class="sb-row-inner sb-pad">
+  <div class="sb-column sb-column-2">
+    <div onclick="openNav()" class="slideRight item fa fa-bars trigger menuTrigger"></div>
+  </div>
+  <div class="sb-column sb-column-8">
+    <div class="slideDown item center logo">
+      SB
+    </div>
+  </div>
+  <div class="sb-column sb-column-2">
+    <div onclick="openNavRight()" class="slideLeft item right fa fa-user trigger loginTrigger"></div>
+  </div>
+</div> -->
+
+<div class="sb-row-inner">
+  <div class="desktopHeader desktop">
+    <div class="sb-column desktop">
+      <div class="slideRight item logo">
+        steve bryson
+      </div>
+    </div>
+
+    <div class="sb-column right desktop">
+      <a href="about.html" class="item about">About</a>
+      <a href="pricing.html" class="item pricing">Pricing</a>
+      <a href="gallery.html" class="item gallery">Gallery</a>
+      <a href="location.html" class="item location">Location</a>
+      <a href="contact.html" class="item contact">Contact Us</a>
+      <div onclick="openNavRight()" class="item fa fa-user trigger loginTrigger"></div>
+      <div onclick="openNavRight()" class="item fa fa-search trigger searchTrigger"></div>
+    </div>
+  </div>
+
+  <div class="mobileHeader mobile">
+    <div class="sb-column sb-column-2 sb-pad-x">
+      <div onclick="openNav()" class="slideRight item fa fa-bars trigger menuTrigger"></div>
+    </div>
+    <div class="sb-column sb-column-8 flex">
+      <div class="slideDown item logo">
+        sb
+      </div>
+    </div>
+    <div class="sb-column sb-column-2 right sb-pad-x">
+      <div onclick="openNavRight()" class="slideLeft item right fa fa-user trigger loginTrigger"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $(".header").on('click','.trigger',function(){
+    var triggerName = $(this).attr('class').split(' ').pop();
+    var id = triggerName.substr(0, triggerName.length - 7);
+
+    $('body, html').css('overflowY', 'hidden').css('height', '100%');
+    $('.darken').fadeIn();
+    $('.sideNavInner').hide();
+    $('.' + id).fadeIn();
+  });
+});
+</script>

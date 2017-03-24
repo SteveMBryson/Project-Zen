@@ -1,0 +1,256 @@
+// Device widths
+$mobile: 414px;
+$tablet: 768px;
+
+// Fonts
+$font-desktop: 80%;
+$font-tablet: 80%;
+$font-mobile: 80%;
+$font-large: 1.6em;
+$font-base: 1.3em;
+$font-small: 1.2em;
+$font-tiny: 1em;
+$font: 'Roboto', sans-serif;
+// $font-alt: 'Playfair Display', serif;
+$weight-large: 600;
+$weight-base: 500;
+$weight-light: 400;
+$h1: 2.8em;
+$h2: 2.4em;
+$h3: 1.8em;
+$h4: $font-small;
+$letter-base: 1.5px;
+$line-large: 25px;
+$line-base: 20px;
+$line-small: 15px;
+
+// Page width-base
+$width-base: 1200px;
+$half-width: -$width-base / 2;
+
+// Colours
+$white: #fff;
+$off-white: #f7f7f7;
+$light-grey: #ddd;
+$grey: #aaa;
+$dark-grey: #555;
+$black: #000;
+$pink: #ba184f;
+$light-pink: #e91e63;
+$green: #4caf50;
+$red: #f44336;
+
+// Opactiy
+$opacity-large: 0.8;
+$opacity-base: 0.6;
+$opacity-small: 0.4;
+
+// Overlays
+$overlay-light: rgba(0,0,0,0.2);
+$overlay-base: rgba(0,0,0,0.5);
+$overlay-dark: rgba(0,0,0,0.6);
+
+// Borders
+$border-light: 1px solid $white;
+$border-base: 1px solid $light-grey;
+$border-dark: 1px solid $black;
+$border-section: 5px solid $off-white;
+$border-tab: 3px solid $white;
+$border-tab-active: 3px solid $light-pink;
+$radius-large: 100%;
+$radius-base: 2px;
+
+// Paddings
+$pad-large: 20px;
+$pad-base: 10px;
+$pad-small: 5px;
+
+.desktop{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+html, body{
+  margin: 0;
+  width: 100%;
+  font-family: $font;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: $font-desktop;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media only screen and (max-width: $mobile){
+  html, body{
+    font-size: $font-mobile;
+  }
+}
+@media only screen and (min-width:$mobile) and (max-width: $tablet){
+  html, body{
+    font-size: $font-tablet;
+  }
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  outline: none;
+}
+
+@import "keyframes";
+@import "layout";
+@import "sideNav";
+@import "product";
+@import "breadCrumbs";
+@import "header";
+@import "slider";
+@import "buttons";
+@import "tabs";
+@import "tables";
+@import "icons";
+@import "options";
+@import "forms";
+@import "articles";
+@import "footer";
+
+.fa-before:before{
+  padding: 0 $pad-small 0 0;
+  font-weight: inherit !important;
+  color: inherit;
+}
+
+h1, h2, h3, h4{
+  font-weight: $weight-large;
+  text-transform: uppercase;
+  margin: 0;
+  padding: $pad-base 0;
+  letter-spacing: $letter-base;
+  line-height: $line-base;
+  font-family: $font;
+}
+
+p{
+  margin: 0;
+  float: left;
+  width: 100%;
+  line-height: $line-large;
+  padding: $pad-base;
+  font-size: $font-small;
+}
+p.center{
+  text-align: center;
+}
+
+h1{
+  font-size: $h1;
+}
+h2{
+  font-size: $h2;
+}
+h3{
+  font-size: $h3;
+}
+h4{
+  font-size: $h4;
+}
+
+.heading{
+  width: 100%;
+  float: left;
+
+  span.count{
+    font-size: $font-base;
+    opacity: $opacity-base;
+    float: right;
+    text-decoration: none;
+    color: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+.heading.center{
+  text-align: center;
+}
+.heading.right{
+  text-align: right;
+}
+
+span.subLine{
+  font-size: $font-base;
+  float: left;
+  width: 100%;
+  padding-top: $pad-small;
+  opacity: $opacity-base;
+}
+
+// Start Page
+.mainContainer{
+  width: 100%;
+  float: left;
+  position: relative;
+  transition: margin-left .5s;
+  padding-top: 56px;
+
+  .darken{
+    width: 100%;
+    height: 100%;
+    background: $overlay-dark;
+    position: fixed;
+    top: 0;
+    display: none;
+    left: 0;
+    z-index: 10;
+  }
+}
+// .mainContainer.default{
+//   padding-top: 78px;
+// }
+
+
+
+// Don't leave this here....
+// Title and Span Stuff
+.titleAndSpan{
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // padding: $pad-large $pad-base;
+
+  h2{
+    font-family: $font;
+    padding: $pad-base;
+  }
+  .sep{
+    width: 30px;
+    height: 2px;
+    background: $light-grey;
+    float: left;
+    margin: $pad-base 0;
+  }
+  span{
+    float: left;
+    font-size: $font-base;
+    font-weight: $weight-large;
+    text-transform: uppercase;
+    letter-spacing: $letter-base;
+    padding: $pad-base;
+    color: $grey;
+  }
+}

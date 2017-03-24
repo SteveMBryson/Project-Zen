@@ -1,0 +1,52 @@
+article{
+  float: left;
+  width: 100%;
+  float: left;
+  background: $white;
+
+  .image{
+    background: $light-grey;
+    width: 100%;
+    float: left;
+
+    img{
+      float: left;
+      width: 100%;
+    }
+  }
+  .details{
+    width: 100%;
+    float: left;
+    padding: $pad-base;
+
+    .heading{
+      padding: $pad-base;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet){
+  article{
+    .image{
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile){
+  .articles{
+    .sb-row-inner{
+      padding: $pad-base 0;
+      .sb-column-4{
+        padding: $pad-base 0;
+        width: 100% !important;
+        article{
+          .image{
+          }
+        }
+      }
+    }
+  }
+}

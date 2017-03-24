@@ -1,0 +1,68 @@
+<!-- <h2 class="heading center">Navigation</h2> -->
+<div class="item alt">
+  <input type="text" class="iconed searchSite" placeholder="Search for anything...">
+  <div class="inputIcon fa fa-search flex"></div>
+</div>
+
+<div class="searchResults">
+  <div class="product">
+    <div class="inner">
+      <div class="image">
+        <div class="new">New</div>
+        <img src="images/placeholder-product.jpg" alt="">
+      </div>
+      <div class="details">
+        <h4 class="heading">Product</h4>
+        <div class="attr">SKU</div>
+        <div class="attr">Price</div>
+      </div>
+    </div>
+  </div>
+  <div class="product">
+    <div class="inner">
+      <div class="image">
+        <div class="new">New</div>
+        <img src="images/placeholder-product.jpg" alt="">
+      </div>
+      <div class="details">
+        <h4 class="heading">Product</h4>
+        <div class="attr">SKU</div>
+        <div class="attr">Price</div>
+      </div>
+    </div>
+  </div>
+  <div class="product">
+    <div class="inner">
+      <div class="image">
+        <img src="images/placeholder-product.jpg" alt="">
+      </div>
+      <div class="details">
+        <h4 class="heading">Product</h4>
+        <div class="attr">SKU</div>
+        <div class="attr">Price</div>
+      </div>
+    </div>
+  </div>
+  <div class="product">
+    <div class="inner">
+      <div class="image">
+        <img src="images/placeholder-product.jpg" alt="">
+      </div>
+      <div class="details">
+        <h4 class="heading">Product</h4>
+        <div class="attr">SKU</div>
+        <div class="attr">Price</div>
+      </div>
+    </div>
+  </div>
+  <p class="center">See 100 more</p>
+</div>
+
+<script>
+$(document).ready(function () {
+  var url = window.location.pathname;
+  var currentPage = url.substr(1, url.length - 6);
+
+  $('.' + currentPage).addClass('active');
+});
+</script>

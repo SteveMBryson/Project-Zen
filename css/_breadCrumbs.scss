@@ -1,0 +1,37 @@
+.breadCrumbs{
+  margin-bottom: 20px;
+  .sb-row{
+    .sb-row-inner{
+      .sb-column{
+        .crumbList{
+          float: left;
+          width: 100%;
+          border-bottom: $border-base;
+          padding: $pad-base 0;
+
+          .crumb{
+            float: left;
+            font-size: $font-small;
+            text-transform: uppercase;
+            font-weight: $weight-large;
+            padding: $pad-base $pad-large $pad-base 0;
+            opacity: $opacity-base;
+            letter-spacing: $letter-base;
+          }
+          .crumb.active{
+            opacity: 1;
+          }
+          .crumb:before{
+            padding-right: $pad-large;
+            opacity: $opacity-base !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $mobile){
+  .breadCrumbs{
+    // display: none;
+  }
+}

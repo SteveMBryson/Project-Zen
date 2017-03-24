@@ -1,0 +1,43 @@
+.iconList{
+  float: left;
+
+  .icon{
+    float: left;
+
+    .inner{
+      width: 100%;
+      float: left;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 100%;
+      font-size: $font-base;
+      border: $border-base;
+      color: $grey;
+    }
+    .inner:hover {
+      border: $border-dark;
+      color: $black;
+    }
+  }
+}
+.iconList.alt{
+  .icon{
+    .inner{
+      border: $border-light;
+      color: $white;
+      opacity: $opacity-base;
+    }
+    .inner:hover {
+      opacity: 1;
+    }
+  }
+}
+.iconList.right{
+  float: right;
+}

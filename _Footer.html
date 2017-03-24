@@ -1,0 +1,57 @@
+<div class="sb-row-inner sb-pad">
+  <div class="sb-column sb-column-2">
+    <ul class="footerGroup">
+      <li class="fa fa-angle-down fa-after">About</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+    </ul>
+  </div>
+  <div class="sb-column sb-column-2">
+    <ul class="footerGroup">
+      <li class="fa fa-angle-down fa-after">News</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+    </ul>
+  </div>
+  <div class="sb-column sb-column-2">
+    <ul class="footerGroup">
+      <li class="fa fa-angle-down fa-after">Contact</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+      <li>Test Item</li>
+    </ul>
+  </div>
+  <div class="sb-column sb-column-6">
+    <ul class="footerGroup right">
+      <li>Social</li>
+      <div class="iconList right alt">
+        <div class="icon sb-pad-small-x">
+          <div class="inner fa fa-facebook"></div>
+        </div>
+        <div class="icon sb-pad-small-x">
+          <div class="inner fa fa-twitter"></div>
+        </div>
+        <div class="icon sb-pad-small-x">
+          <div class="inner fa fa-linkedin"></div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<script src="js/scripts.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $(".footer").on('click','.footerGroup li:nth-of-type(1)',function(){
+    $(this).toggleClass("fa-angle-down").toggleClass("fa-angle-up")
+    $(this).siblings("li").toggle();
+  });
+});
+</script>

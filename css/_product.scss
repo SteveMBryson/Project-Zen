@@ -1,0 +1,72 @@
+// Side Nav Search
+
+.searchResults{
+  float: left;
+  width: 100%;
+  padding: $pad-small;
+  background: $off-white;
+  display: none;
+
+  .product{
+    width: 50%;
+  }
+}
+
+.product{
+  padding: $pad-small;
+  float: left;
+  white-space: nowrap;
+
+  .inner{
+    float: left;
+    width: 100%;
+    background: $white;
+
+    .image{
+      float: left;
+      width: 100%;
+      position: relative;
+
+      .new{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $light-pink;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: $letter-base;
+        font-weight: $weight-base;
+        font-size: $font-tiny;
+        padding: $pad-small;
+      }
+
+      img{
+        width: 100%;
+        float: left;
+      }
+    }
+    .details{
+      width: 100%;
+      float: left;
+
+      .heading{
+        padding: $pad-base;
+        overflow: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .attr{
+        font-size: $font-small;
+        float: left;
+        width: 100%;
+        padding: 0 $pad-base $pad-small $pad-base;
+        overflow: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .attr:nth-last-of-type(1){
+        padding-bottom: $pad-base;
+      }
+    }
+  }
+}
